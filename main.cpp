@@ -1,53 +1,42 @@
-#include <cstdio>
-#include <iostream>           // std::cin
-#include <string>             // std::string
-#include <string_view>        // std::string_view
+#include <iostream>
+#include <vector>
+#include <cstdio> 
+#include <string>
+#include <string_view>
+#include <algorithm>
+#include <array>
 
-int main()
-{
-        // std::string name {};
-        // std::cout << "Please enter your name: ";
-        // // std::cin >> name;
-        // std::getline(std::cin, name);
-        // std::cout << name << '\n';
+using namespace std;
+int main () {
+      //std::array<char, 30> items = { chocolate , pancakemix, milk, beer, keyholder, earphones, mug, burger, laptop, cheese, yoghurt, schoolbag, battery, razor, bleach, sanitarypad, bodyspray, cake, shoes, mouthwash, wristwatch, candy, tissue, hairbrush, ink, books, teabags, trashbags, mop, soap} ;
+       
+      std::array<char, 4>
+      array[0] = Name;
+      array [1] = BBD;
+      
+       //items = {Name, BBD, Price, Type}
+      
 
-        // Task: Ask the user to enter a date in DD.MM.YYYY and display it.
-        // std::cin and std::cout and std::string
-        // std::string date {};
-        // std::cout << "Please enter a date (DD.MM.YYYY): ";
-        // std::cin >> date;
-        // // std::getline(std::cin, date);
-        // std::cout << date << '\n';
+//int main() {
+       
+       //enum items { chocolate, pancakemix, milk, beer, keyholder, earphones, mug, burger, laptop, cheese, yoghurt, schoolbag, battery, razor, bleach, sanitarypad, bodyspray, cake, shoes, mouthwash, wristwatch, candy, tissue, hairbrush, ink, books, teabags, trashbags, mop, soap };
 
-        // TYPE NAME VALUE
-        std::string name {};
-        std::cout << "Please enter a name: ";
-        auto ch {'\0'};
-        // Processes one line of input character by character until '\n' is found.
-        // This loop will display the '\n' character as well.
-        do {
-                std::cin.get(ch);
-                // std::scanf(" %c", &ch);
+       // vector<items> myitems = {chocolate, pancakemix, milk, beer, keyholder, earphones, mug, burger, laptop, cheese, yoghurt, schoolbag, battery, razor, bleach, sanitarypad, bodyspray, cake, shoes, mouthwash, wristwatch, candy, tissue, hairbrush, ink, books, teabags, trashbags, mop, soap};
+       // cout << "Initial vector size is " << myitems.size() << "\n" ;
+       // std::string newitem {};
+     //   std::cout << "Add item (item): " ;
+      //  std::getline( std::cin, newitem);
+        std::string item{};
 
-                switch (ch)
-                {
-                        case 'a': ch = '4'; break;
-                        case 'e': ch = '3'; break;
-                        case 'i': ch = '1'; break;
-                        case 'o': ch = '0'; break;
-                        case 'u': ch = '_'; break;
-                        default: break;
-                }
-                std::cout << ch;
-        } while (ch != '\n');
+        while (true) {
+                const auto space_pos = std::find(newitem.begin(), newitem.end(), ' ');
+                
 
-        // std::getline(std::cin, name);
+        }
 
-        // for (auto c : name) { std::cout << c << '.'; }
-        // std::cout << '\n';
+                
+        }
 
-        // Task: Replace the '.' with a '-'
-        // Task: Check if the character in the name is a vowel. Then we print a number in its place.
-        // a - 4, e - 3, i - 1, o - 0, u - _
-        // For example: Joe Rogan -> J03 R0g4n
-}
+
+
+ 
