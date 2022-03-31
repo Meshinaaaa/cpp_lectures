@@ -17,7 +17,8 @@ using namespace std;
         enum class items : char
 
         {
-                chocolate,
+               Invalid = -1,
+               chocolate,
                 pancakemix,
                 milk,
                 beer,
@@ -27,7 +28,8 @@ using namespace std;
                 cheese,
                 yoghurt,
                 battery,
-                razor
+                razor,
+                Count 
         };
 
 
