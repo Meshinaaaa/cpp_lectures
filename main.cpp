@@ -1,5 +1,4 @@
 #include <algorithm>
-#include <array>
 #include <cstdio>
 #include <fstream>
 #include <iostream>
@@ -28,7 +27,6 @@ enum class databaseitems: char
         Battery,
         Count
 };
-
 
  using namespace std;
  void input();
@@ -130,14 +128,11 @@ int main()
                                    std::cout << "No Items Found" << nl;
                            }
 
-
                    }
                    system ("pause");
                    std::cin.get ();
                    main ();
-
-
-
+ 
            }
            void Exit();
            {
@@ -147,7 +142,6 @@ int main()
                    system("pause");
                    std::cin.get ();
 
-
            }
 
            
@@ -155,4 +149,4 @@ int main()
 
         
 
-      
+  
