@@ -5,7 +5,7 @@
 #include <vector>
 
 constexpr auto MAX_ITEMS      = 30;
-constexpr auto MAX_MODEL_NAME = 60;        // longest model name
+constexpr auto MAX_MODEL_NAME = 60;        
 
 enum class Product
 {
@@ -57,11 +57,11 @@ auto list_products()
 /// Represents a stocked item corresponding to one of the listed product categories.
 struct Item
 {
-        Product     id;           // Product category that item falls into
-        std::string name;         // Name of the item
-        float       price;        // Price in GBP
+        Product     id;           
+        std::string name;        
+        float       price;        
         std::string BBD;
-        int         nstock;        // No. of units in stock
+        int         nstock;      
         Item() = default;
 
         Item(const Product prod, const std::string& name, const float price, const std::string& BBD, const int nstock) :
@@ -76,7 +76,7 @@ struct Inventory
 {
         using SearchPredicate = std::function<bool(const Item&)>;
         using Items           = std::vector<Item>;
-        using ItemPtr         = Items::iterator;        // pointer to item type
+        using ItemPtr         = Items::iterator;        
 
         Items items;
 
@@ -158,7 +158,7 @@ struct InventoryUI
                         if (!is_valid_product(item.id)) { std::printf("Invalid option selected. Please try again.\n"); }
                         else
                         {
-                                // NOTE(CA, 28.03.2022) - Important to note that we need to consume the whitespaces from user input when using getline
+                                
                                 std::printf("Enter product name: ");
                                 std::getline(std::cin >> std::ws, item.name);
 
@@ -211,7 +211,7 @@ struct InventoryUI
 
                 if (pitem != Inventory::ItemPtr {})
                 {
-                        // we ask the user what they'd like to do with this found item
+                        
                         do {
                                 pitem->print();
                                 std::printf("---------------\n");
@@ -228,8 +228,7 @@ struct InventoryUI
                                 }
                                 else if (opt == static_cast<char>(Option::EditItem))
                                 {
-                                        // NOTE(CA, 28.03.2022) - This is cumbersome to use and also inefficient. You should swap in-place or
-                                        // just edit a property of interest but that'd be more complicated.
+                                       
                                         const auto new_item = handle_add_option();
                                         inventory.remove(pitem);
                                         inventory.add(new_item);
