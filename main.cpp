@@ -7,7 +7,6 @@
 constexpr auto MAX_ITEMS      = 30;
 constexpr auto MAX_MODEL_NAME = 60;        // longest model name
 
-/// List of product categories stocked in store.
 enum class Product
 {
         Invalid = -1,
@@ -189,7 +188,6 @@ struct InventoryUI
 
                 if (opt == 'n')
                 {
-                        // search for item by name
                         std::string name {};
                         std::printf("Enter product name: ");
                         std::getline(std::cin >> std::ws, name);
@@ -197,7 +195,6 @@ struct InventoryUI
                 }
                 else if (opt == 'p')
                 {
-                        // search for item by product id
                         Product prod {Product::Invalid};
                         list_products();
                         std::printf("Select product id: ");
@@ -212,7 +209,6 @@ struct InventoryUI
                         return;
                 }
 
-                // if item was found
                 if (pitem != Inventory::ItemPtr {})
                 {
                         // we ask the user what they'd like to do with this found item
